@@ -5,7 +5,7 @@ import pandas as pd
 import openpyxl
 from openpyxl import load_workbook
 
-class ElasticIPs:
+class NetworkInterfaces:
 
     def __init__(self, session):
         self.session = session
@@ -84,6 +84,6 @@ def test_run():
             test_run = ElasticIPs(session)
             df = test_run.return_df()
             test_run.make_blank_excel(profile)
-            test_run.write_new_sheet(profile, df, "ElasticIPs")
+            test_run.write_new_sheet(profile, df, "NetworkInterfaces")
     
 test_run()
