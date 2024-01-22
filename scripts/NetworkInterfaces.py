@@ -81,7 +81,7 @@ def test_run():
             pass
         else:
             session = boto3.session.Session(profile_name=profile)
-            test_run = ElasticIPs(session)
+            test_run = NetworkInterfaces(session)
             df = test_run.return_df()
             test_run.make_blank_excel(profile)
             test_run.write_new_sheet(profile, df, "NetworkInterfaces")
